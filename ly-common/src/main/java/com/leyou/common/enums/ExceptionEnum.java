@@ -22,7 +22,12 @@ public enum ExceptionEnum {
     BRAND_NOT_FOUND(404,"品牌分类为查到"),
     BRAND_SAVE_ERROR(500,"新增品牌失败"),
     UPLOAD_FILE_ERROR(500,"上传文件失败"),
-    INVALID_FILE_TYPE(500,"无效文件类型")
+    INVALID_FILE_TYPE(500,"无效文件类型"),
+    SPEC_GROUP_NOT_FOUND(404,"规格组没有查询到"),
+    SPEC_PARAM_NOT_FOUND(404,"规格参数没有查询到"),
+    INSERT_GROUP_FAILURE(404,"新增规格组失败"),
+    UPDATE_GROUP_FAILURE(404,"修改更新规格组失败"),
+    DELETE_GROUP_FAILURE(404,"删除规格组失败")
     ;
     private int code;
     private String msg;
