@@ -99,4 +99,18 @@ public class BrandServiceImpl implements BrandService {
             }
         }
     }
+
+    /**
+     * 根据id查询品牌
+     * @param id
+     * @return
+     */
+    @Override
+    public Brand queryById(Long id) {
+        Brand brand = brandMapper.selectByPrimaryKey(id);
+        if (brand == null){
+            throw  new LyException(ExceptionEnum.BRAND_NOT_FOUND);
+        }
+        return brand;
+    }
 }

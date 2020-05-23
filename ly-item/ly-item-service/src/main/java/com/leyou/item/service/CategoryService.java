@@ -15,4 +15,11 @@ public interface CategoryService {
      * @return
      */
     List<Category> queryCategoryListByPid(Long pid);
+
+    /**
+     * 根据数据查询分类信息List
+     * @param ids
+     * @return
+     */
+    List<Category> queryByIds(List<Long> ids);
 }

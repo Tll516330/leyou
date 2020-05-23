@@ -39,4 +39,20 @@ public class CategoryServiceImpl implements CategoryService {
         }
         return list;
     }
+
+    /**
+     * 根据数据来查询分类
+     * @param ids
+     * @return
+     */
+    @Override
+    public List<Category> queryByIds(List<Long> ids) {
+        List<Category> categories = categoryMapper.selectByIdList(ids);
+
+        if (CollectionUtils.isEmpty(categories)){
+            //自定义异常捕获
+            throw  new LyException(ExceptionEnum.CATEGORY_NOT_FOUND);
+        }
+        return categories;
+    }
 }

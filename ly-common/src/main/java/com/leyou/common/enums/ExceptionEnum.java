@@ -27,7 +27,8 @@ public enum ExceptionEnum {
     SPEC_PARAM_NOT_FOUND(404,"规格参数没有查询到"),
     INSERT_GROUP_FAILURE(404,"新增规格组失败"),
     UPDATE_GROUP_FAILURE(404,"修改更新规格组失败"),
-    DELETE_GROUP_FAILURE(404,"删除规格组失败")
+    DELETE_GROUP_FAILURE(404,"删除规格组失败"),
+    GOODS_NOT_FOUND(404,"商品未查询到")
     ;
     private int code;
     private String msg;
